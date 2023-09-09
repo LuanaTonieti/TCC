@@ -53,6 +53,7 @@ class UtilsDB(QMainWindow):
             cursor.execute(f"SELECT * FROM medidas WHERE {campo} {operations[operacao]} '{valor}' {searchProject}")
         
         medidas = cursor.fetchall()
+
         if len(medidas) == 0:
             self.window.close()
             self.searchNotFind = SearchNotFind.SearchNotFind()
@@ -63,15 +64,22 @@ class UtilsDB(QMainWindow):
                 row_len.append(len(i))
             col_num = max(row_len)
             self.form.tableWidget.setRowCount(0)	
-            self.form.tableWidget.setColumnCount(int(col_num))
-            self.form.tableWidget.setHorizontalHeaderLabels(('Código', 'Nome', 'Altura', 'Largura', 'Comprimento', 'Imagem', 'Data'))
+            self.form.tableWidget.setColumnCount(int(col_num)+1)
+            self.form.tableWidget.setHorizontalHeaderLabels(('Código', 'Nome', 'Altura [cm]', 'Largura [cm]', 'Comprimento [cm]', 'Volume [cm3]', 'Imagem', 'Data'))
                 
             for row, row_data in enumerate(medidas):
                 self.form.tableWidget.insertRow(row)
+                row_data = list(row_data)
+                volume = 1
+                row_data.insert(5, volume)
                 for col, col_data in enumerate(row_data):
-                    if col == 6:
+                    if col >= 2 and col <= 4:
+                        volume *= col_data
+                        if col == 4:
+                            row_data[5] = "{:.2f}".format(volume)
+                    if col == 7:
                         col_data = col_data.strftime('%d-%m-%Y')
-                    if col == 5:
+                    if col == 6:
                         pix = QPixmap()
                         self.label = QLabel()
                         if pix.loadFromData(base64.b64decode(col_data)):
@@ -139,4 +147,3 @@ def deletar(codigo):
         result = True
     desconectar(conn)
     return result
-
