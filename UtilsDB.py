@@ -27,30 +27,13 @@ class UtilsDB(QMainWindow):
         self.searchOptions = SearchOptions.SearchOptions()
         self.searchOptions.window.show()
 
-    def pesquisar(self, opcao, campo, operacao, valor, projectName):
-
-        operations = {
-            "Maior que": ">",
-            "Menor que": "<",
-            "Igual a": "=",
-            "Depois de": ">",
-            "Antes de": "<",
-            "Na data de": "="
-        }
-
-        if not projectName:
-            searchProject = ''
-        else:
-            searchProject = f"AND nome_projeto = '{projectName}'"
-
+    def pesquisar(self, query, option):
         conn = conectar()
         cursor = conn.cursor()
-        if opcao == 0: 
+        if option == 0: 
             cursor.execute('SELECT * FROM medidas')
-        elif opcao == 1: 
-            cursor.execute(f"SELECT * FROM medidas WHERE {campo} = '{valor}' {searchProject}")
-        elif opcao == 2: 
-            cursor.execute(f"SELECT * FROM medidas WHERE {campo} {operations[operacao]} '{valor}' {searchProject}")
+        elif option == 1: 
+            cursor.execute(f"SELECT * FROM medidas WHERE {query}")
         
         medidas = cursor.fetchall()
 

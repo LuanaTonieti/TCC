@@ -145,6 +145,9 @@
         <property name="text">
          <string>Nome do Projeto       </string>
         </property>
+        <attribute name="buttonGroup">
+         <string notr="true">filtros</string>
+        </attribute>
        </widget>
       </item>
       <item>
@@ -601,9 +604,41 @@
  <resources/>
  <connections>
   <connection>
+   <sender>dataRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dataCB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dataRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>data</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>tudoRB</sender>
    <signal>clicked(bool)</signal>
-   <receiver>nomeRB</receiver>
+   <receiver>dataRB</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -611,8 +646,168 @@
      <y>100</y>
     </hint>
     <hint type="destinationlabel">
-     <x>85</x>
-     <y>128</y>
+     <x>36</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>volumeRB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>volumeRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>volumeText</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>volumeRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>volumeCB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comprimentoRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comprimentoCB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comprimentoRB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>63</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comprimentoRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comprimentoText</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>larguraRB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>larguraRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>larguraText</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>larguraRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>larguraCB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>alturaRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>alturaText</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>158</y>
     </hint>
    </hints>
   </connection>
@@ -649,41 +844,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>nomeRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>nomeText</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>85</x>
-     <y>128</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>307</x>
-     <y>128</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>alturaRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>alturaText</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>64</x>
-     <y>158</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>374</x>
-     <y>158</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>tudoRB</sender>
    <signal>clicked(bool)</signal>
-   <receiver>larguraRB</receiver>
+   <receiver>idRB</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -691,184 +854,8 @@
      <y>100</y>
     </hint>
     <hint type="destinationlabel">
-     <x>64</x>
-     <y>188</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tudoRB</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>comprimentoRB</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>230</x>
-     <y>100</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>63</x>
-     <y>218</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tudoRB</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>volumeRB</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>230</x>
-     <y>100</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>64</x>
-     <y>248</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tudoRB</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>dataRB</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>230</x>
-     <y>100</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>36</x>
-     <y>278</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>larguraRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>larguraCB</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>64</x>
-     <y>188</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>209</x>
-     <y>188</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>larguraRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>larguraText</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>64</x>
-     <y>188</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>374</x>
-     <y>188</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>comprimentoRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>comprimentoCB</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>63</x>
-     <y>218</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>208</x>
-     <y>218</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>comprimentoRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>comprimentoText</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>63</x>
-     <y>218</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>374</x>
-     <y>218</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>volumeRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>volumeCB</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>64</x>
-     <y>248</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>209</x>
-     <y>248</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>volumeRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>volumeText</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>64</x>
-     <y>248</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>374</x>
-     <y>248</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dataRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>data</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>36</x>
-     <y>278</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>403</x>
-     <y>278</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dataRB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dataCB</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>36</x>
-     <y>278</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>210</x>
-     <y>278</y>
+     <x>86</x>
+     <y>163</y>
     </hint>
    </hints>
   </connection>
@@ -891,7 +878,7 @@
   <connection>
    <sender>tudoRB</sender>
    <signal>clicked(bool)</signal>
-   <receiver>idRB</receiver>
+   <receiver>nomeRB</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -899,13 +886,33 @@
      <y>100</y>
     </hint>
     <hint type="destinationlabel">
-     <x>86</x>
-     <y>163</y>
+     <x>85</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nomeRB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>nomeText</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>128</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="filtros"/>
+  <buttongroup name="filtros">
+   <property name="exclusive">
+    <bool>false</bool>
+   </property>
+  </buttongroup>
  </buttongroups>
 </ui>
