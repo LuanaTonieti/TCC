@@ -1,3 +1,9 @@
+"""
+Codigo que possui a classe para a janela de opcoes de busca
+Autor: Luana Watanabe Tonieti
+Email: luanawt43@gmail.com
+"""
+
 from PyQt6.QtWidgets import *
 from PyQt6 import uic
 import Menu
@@ -5,6 +11,10 @@ import UtilsDB
 import SearchNotFind
 
 class SearchOptions(QMainWindow):
+    """
+    Classe para a janela de opcoes de busca. Carrega a interface criada e define os
+    metodos a serem chamados caso determinados botoes sejam clicados
+    """
     def __init__(self):
         super().__init__()
         self.Form, self.Window = uic.loadUiType("SearchOptions.ui")
@@ -15,11 +25,20 @@ class SearchOptions(QMainWindow):
         self.form.voltarButton.clicked.connect(self.voltar_button_clicked)
         
     def voltar_button_clicked(self):
+        """
+        Metodo que fecha a janela atual e abre a janela do Menu caso o 
+        usuario clique para voltar
+        """
         self.window.close()
         self.menu = Menu.Menu()
         self.menu.window.show()
 
     def pesquisar_button_clicked(self):
+        """
+        Metodo responsavel por montar a query de acordo com o que o usuario
+        colocou na GUI. No final, fecha a janela atual e abre a janela
+        mostrando o resultado da pesquisa
+        """
         self.utilsDB = UtilsDB.UtilsDB()
         self.query = ''
 

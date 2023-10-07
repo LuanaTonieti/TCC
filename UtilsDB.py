@@ -1,3 +1,10 @@
+"""
+Codigo que possui a classe para a janela que mostra os resultados das buscas no db, alem de todas
+funcoes para usar o banco de dados
+Autor: Luana Watanabe Tonieti
+Email: luanawt43@gmail.com
+"""
+
 from PyQt6.QtWidgets import *
 from PyQt6 import uic
 from PyQt6.QtGui import QPixmap
@@ -8,6 +15,10 @@ import SearchOptions
 import SearchNotFind
 
 class UtilsDB(QMainWindow):
+    """
+    Classe para a janela que mostra as informacoes que estao no banco de dados. Carrega 
+    a interface criada e define os metodos a serem chamados caso determinados botoes sejam clicados
+    """
     def __init__(self):
         super().__init__()
         self.Form, self.Window = uic.loadUiType("ShowSearch.ui")
@@ -18,16 +29,29 @@ class UtilsDB(QMainWindow):
         self.form.pesquisarButton.clicked.connect(self.pesquisar_button_clicked)
     
     def voltar_button_clicked(self):
+        """
+        Metodo que fecha a janela atual e abre a janela do Menu caso o 
+        usuario clique para voltar
+        """
         self.window.close()
         self.menu = Menu.Menu()
         self.menu.window.show()
 
     def pesquisar_button_clicked(self):
+        """
+        Metodo que fecha a janela atual e abre a janela para o usuario fazer
+        outra pesquisa
+        """
         self.window.close()
         self.searchOptions = SearchOptions.SearchOptions()
         self.searchOptions.window.show()
 
     def pesquisar(self, query, option):
+        """
+        Metodo que faz a pesquisa no banco de dados
+        :param query: recebe uma string
+        :param option: recebe um int 
+        """
         conn = conectar()
         cursor = conn.cursor()
         if option == 0: 
@@ -74,7 +98,11 @@ class UtilsDB(QMainWindow):
         desconectar(conn)
 
 
-def conectar(): # Faz a conexao com o db. Retorna True se foi feita com sucesso e False se deu erro
+def conectar():
+    """
+    Funcao que faz a conexao com o banco de dados
+    retun: bool que indica se a conexao foi feita com sucesso
+    """
     result = True
     try:
         conn = MySQLdb.connect(
@@ -89,12 +117,25 @@ def conectar(): # Faz a conexao com o db. Retorna True se foi feita com sucesso 
     return result
 
 
-def desconectar(conn): # Desconecta do db
+def desconectar(conn): 
+    """
+    Funcao que desconecta do banco de dados
+    """
     if conn:
         conn.close()
 
 
-def inserir(nome, altura, largura, comprimento, imagem, data): # Insere os dados no db
+def inserir(nome, altura, largura, comprimento, imagem, data): 
+    """
+    Funcao que insere as informacoes da medicao no banco de dados
+    :param nome: recebe uma string
+    :param altura: recebe um float
+    :param largura: recebe um float
+    :param comprimento: recebe um float
+    :param imagem: recebe bytes
+    :param data: recebe uma data
+    :return bool indicando o sucesso ou nao da insercao
+    """
     conn = conectar()
     cursor = conn.cursor()
     args = (nome, altura, largura, comprimento, imagem, data)
@@ -109,6 +150,11 @@ def inserir(nome, altura, largura, comprimento, imagem, data): # Insere os dados
 
 
 def atualizar(query, codigo):
+    """
+    Funcao que atualiza as informacoes da medicao especificada no banco de dados
+    :param codigo: recebe um int do codigo a ser atualizado
+    :return bool indicando o sucesso ou nao da atualizacao
+    """
     conn = conectar()
     cursor = conn.cursor()
     cursor.execute(f"UPDATE medidas SET {query} WHERE codigo={codigo}")
@@ -121,6 +167,11 @@ def atualizar(query, codigo):
 
 
 def deletar(codigo):
+    """
+    Funcao que deleta a medicao especificada
+    :param codigo: recebe um int do codigo a ser deletado
+    :return bool indicando o sucesso ou nao da remocao
+    """
     conn = conectar()
     cursor = conn.cursor()
     cursor.execute(f"DELETE FROM medidas WHERE codigo={codigo}")
