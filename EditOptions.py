@@ -47,7 +47,7 @@ class EditOptions(QMainWindow):
         query = ''
         result = False
         if self.form.excluirRB.isChecked():
-            UtilsDB.deletar(self.codigo)
+            result = UtilsDB.deletar(self.codigo)
         else:
             if self.form.nomeRB.isChecked():
                 query += f", nome_projeto = '{self.form.nomeText.text()}'"

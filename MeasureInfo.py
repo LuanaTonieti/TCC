@@ -5,7 +5,7 @@ Email: luanawt43@gmail.com
 """
 
 from PyQt6.QtWidgets import *
-from PyQt6 import uic
+from PyQt6 import uic, QtGui
 import MeasureDialog
 import UtilsDB
 import base64
@@ -48,9 +48,9 @@ class MeasureInfo(QMainWindow):
         self.form.larguraText.setText("{:.2f}".format(largura))
         self.form.comprimentoText.setText("{:.2f}".format(comprimento))
         self.form.volumeText.setText("{:.2f}".format(altura*largura*comprimento))
-        format_string = '%Y-%m-%d'
+        format_string = '%d/%m/%Y'
         data_string = data.strftime(format_string)
-        self.form.image.setStyleSheet("background-image : url(" + str(imagem) + ")")
+        self.form.image.setPixmap(QtGui.QPixmap(str(imagem)))
         self.form.dataText.setText(data_string)
         
     def finalizar_button_clicked(self):

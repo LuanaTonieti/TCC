@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>600</height>
+    <width>421</width>
+    <height>243</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,16 +16,16 @@
   <widget class="QPushButton" name="continuarButton">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>370</y>
-     <width>351</width>
-     <height>51</height>
+     <x>150</x>
+     <y>160</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>22</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
@@ -36,16 +36,10 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>570</y>
-     <width>111</width>
-     <height>31</height>
+     <y>220</y>
+     <width>75</width>
+     <height>23</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>14</pointsize>
-    </font>
    </property>
    <property name="text">
     <string>Voltar</string>
@@ -55,21 +49,45 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>190</y>
-     <width>941</width>
+     <y>20</y>
+     <width>341</width>
      <height>59</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>30</pointsize>
+     <pointsize>16</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Entre com o código da medição que será editada:</string>
+    <string>Entre com o código da medição</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>341</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>que será editada:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -78,16 +96,16 @@
   <widget class="QLineEdit" name="codigoText">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>280</y>
-     <width>351</width>
-     <height>51</height>
+     <x>80</x>
+     <y>110</y>
+     <width>261</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>22</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="layoutDirection">

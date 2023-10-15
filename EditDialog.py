@@ -56,4 +56,4 @@ class EditDialog(QMainWindow):
             self.form.editarButton.setText("Nova Edição")
         else:
             self.form.label.setText("Erro na edição.")
-            self.form.editarButton.setText("Tentar novamente")
+            self.form.editarButton.setText("Tentar Novamente")

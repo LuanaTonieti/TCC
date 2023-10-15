@@ -48,7 +48,7 @@ class PositionBox(QMainWindow):
         # abrir webcam e pegar a imagem, pegar os dados obtidos pelos sensores
         print("Medindo...")
         data = date.today()
-        imagem = 'dog.png'
+        imagem = 'caixa.png'
         altura = 57.4
         largura = 87.1
         comprimento = 441.92

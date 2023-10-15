@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>600</height>
+    <width>462</width>
+    <height>215</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,16 +16,13 @@
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>150</y>
-      <width>811</width>
+      <x>40</x>
+      <y>30</y>
+      <width>391</width>
       <height>61</height>
      </rect>
     </property>
@@ -41,22 +38,22 @@
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;Olá! Selecione o que deseja fazer:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>Olá! Selecione o que deseja fazer:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="editarButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>310</y>
-      <width>281</width>
-      <height>71</height>
+      <x>320</x>
+      <y>110</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>24</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -67,15 +64,15 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>310</y>
-      <width>281</width>
-      <height>71</height>
+      <y>110</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>24</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -85,16 +82,16 @@
    <widget class="QPushButton" name="procurarButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>310</y>
-      <width>281</width>
-      <height>71</height>
+      <x>180</x>
+      <y>110</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>24</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -107,7 +104,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1024</width>
+     <width>462</width>
      <height>21</height>
     </rect>
    </property>
