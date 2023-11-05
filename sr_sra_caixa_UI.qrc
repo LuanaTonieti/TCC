@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>sr_sra_caixa.png</file>
+  </qresource>
+</RCC>
