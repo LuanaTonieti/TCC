@@ -97,7 +97,7 @@
     <string>Excluir Medição</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -140,7 +140,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -195,7 +195,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -247,7 +247,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -299,7 +299,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -515,6 +515,86 @@
     <hint type="destinationlabel">
      <x>374</x>
      <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>excluirRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comprimentoText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>excluirRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>larguraText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>625</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>excluirRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>alturaText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>excluirRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>nomeText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>excluirRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>data</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>908</x>
+     <y>440</y>
     </hint>
    </hints>
   </connection>

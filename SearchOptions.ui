@@ -97,7 +97,7 @@
     <string>Mostrar Tudo</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -141,7 +141,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -239,7 +239,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -347,7 +347,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -391,7 +391,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -502,7 +502,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -610,7 +610,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -1022,6 +1022,198 @@
     <hint type="destinationlabel">
      <x>64</x>
      <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>idText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>597</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>nomeText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>alturaCB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>510</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>alturaText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>870</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>larguraCB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>510</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>larguraText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>871</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comprimentoCB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comprimentoText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>871</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>volumeCB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>510</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>volumeText</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>870</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>dataCB</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>459</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tudoRB</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>data</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>907</x>
+     <y>459</y>
     </hint>
    </hints>
   </connection>
