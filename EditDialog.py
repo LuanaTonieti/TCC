@@ -16,7 +16,7 @@ class EditDialog(QMainWindow):
     interface criada e define os metodos a serem chamados caso determinados botoes 
     sejam clicados. Recebe o nome e as informacoes obtidas atraves das medicoes
     """
-    def __init__(self, result):
+    def __init__(self, result, exist):
         """
         :param result: recebe uma bool
         """
@@ -25,7 +25,7 @@ class EditDialog(QMainWindow):
         self.window = self.Window()
         self.form = self.Form()
         self.form.setupUi(self.window)
-        self.set_text_button_label(result)
+        self.set_text_button_label(result, exist)
         self.form.editarButton.clicked.connect(self.editar_button_clicked)
         self.form.menuButton.clicked.connect(self.menu_button_clicked)
         
@@ -46,14 +46,18 @@ class EditDialog(QMainWindow):
         self.menu = Menu.Menu()
         self.menu.window.show()
 
-    def set_text_button_label(self, result):
+    def set_text_button_label(self, result, exist):
         """
         Metodo que escreve no label se a edicao foi feita com sucesso ou nao
         :param result: recebe uma bool
         """
-        if result:
-            self.form.label.setText("Edição feita com sucesso!")
-            self.form.editarButton.setText("Nova Edição")
+        if exist:
+            if result:
+                self.form.label.setText("Edição feita com sucesso!")
+                self.form.editarButton.setText("Nova Edição")
+            else:
+                self.form.label.setText("Erro na edição.")
+                self.form.editarButton.setText("Tentar Novamente")
         else:
-            self.form.label.setText("Erro na edição.")
+            self.form.label.setText("Código não existente.")
             self.form.editarButton.setText("Tentar Novamente")

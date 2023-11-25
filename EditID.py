@@ -9,6 +9,8 @@ from PyQt6.QtWidgets import *
 from PyQt6 import uic
 import Menu
 import EditOptions
+import UtilsDB
+import EditDialog
 
 class EditID(QMainWindow):
     """
@@ -40,5 +42,9 @@ class EditID(QMainWindow):
         """
         self.codigoEdit = self.form.codigoText.text()
         self.window.close()
-        self.editOptions = EditOptions.EditOptions(self.codigoEdit)
-        self.editOptions.window.show()
+        if UtilsDB.verificar_existencia(self.codigoEdit):
+            self.editOptions = EditOptions.EditOptions(self.codigoEdit)
+            self.editOptions.window.show()
+        else:
+            self.editSucess = EditDialog.EditDialog(False, False)
+            self.editSucess.window.show()

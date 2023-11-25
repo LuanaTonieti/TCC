@@ -15,7 +15,7 @@ class MeasureDialog(QMainWindow):
     ou se houve algum erro. Carrega a interface criada e define os metodos a serem 
     chamados caso determinados botoes sejam clicados
     """
-    def __init__(self, result):
+    def __init__(self, result, nome):
         super().__init__()
         self.Form, self.Window = uic.loadUiType("MeasureDialog.ui")
         self.window = self.Window()
@@ -24,6 +24,7 @@ class MeasureDialog(QMainWindow):
         self.set_text_button_label(result)
         self.form.medirButton.clicked.connect(self.medir_button_clicked)
         self.form.menuButton.clicked.connect(self.menu_button_clicked)
+        self.nome = nome
         
     def medir_button_clicked(self):
         """

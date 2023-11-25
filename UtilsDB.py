@@ -181,3 +181,18 @@ def deletar(codigo):
         result = True
     desconectar(conn)
     return result
+
+def verificar_existencia(codigo):
+    """
+    Funcao que verifica se a medicao requisitada existe
+    :param codigo: recebe um int do codigo da medicao a ser verificado
+    """
+    conn = conectar()
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT * FROM medidas WHERE codigo={codigo}")
+    conn.commit()
+    result = False
+    if cursor.rowcount == 1: # verifica de atualizou com sucesso
+        result = True
+    desconectar(conn)
+    return result

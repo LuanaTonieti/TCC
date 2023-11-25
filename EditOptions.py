@@ -61,5 +61,5 @@ class EditOptions(QMainWindow):
                 query += f", data_imagem = '{self.form.data.date().toPyDate().strftime('%Y-%m-%d')}'"
             if query:
                 result = UtilsDB.atualizar(query[1:], self.codigo)
-        self.editSucess = EditDialog.EditDialog(result)
+        self.editSucess = EditDialog.EditDialog(result, True)
         self.editSucess.window.show()

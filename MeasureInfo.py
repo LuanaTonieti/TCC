@@ -63,5 +63,5 @@ class MeasureInfo(QMainWindow):
         self.imagem = base64.b64encode(self.imagem)
         result = UtilsDB.inserir(self.nome, self.altura, self.largura, self.comprimento, self.imagem, self.data)
         self.window.close()
-        self.measureDialog = MeasureDialog.MeasureDialog(result)
+        self.measureDialog = MeasureDialog.MeasureDialog(result, self.nome)
         self.measureDialog.window.show()
